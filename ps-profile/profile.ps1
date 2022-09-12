@@ -24,9 +24,12 @@ Get-ChildItem ps*.ps1 | ForEach-Object {. $_.FullName}
 
 Pop-Location
 
-# Configuring PSReadline
+## Configuring PSReadline
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -HistoryNoDuplicates
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
+
+## Disabling Git File Status Scanning ( Cmder ). If not disabled makes processing of files too slow for large repositories.
+$GitPromptSettings.EnableFileStatus = $false
