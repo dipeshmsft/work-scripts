@@ -99,13 +99,16 @@ Set-Alias -Name .... -Value cd....
 
 Set-Alias -Name l -Value Get-ChildItem
 
-Function change-and-list { Set-Location $arg | Get-ChildItem }
-Set-Alias -Name cl -Value change-and-list
+Function Set-AndListLocation { Set-Location $arg | Get-ChildItem }
+Set-Alias -Name cl -Value Set-AndListLocation
 
 ### 3. Executable-Based Aliases
 ## ----------------------------------------- ##
-Function explorer-alias { explorer.exe . }
-Set-Alias -Name e. -Value explorer-alias
+Function Open-ExplorerHere { explorer.exe . }
+Set-Alias -Name e. -Value Open-ExplorerHere
+
+Function Open-VSCodeHere { code . }
+Set-Alias -Name c. -Value Open-VSCodeHere
 
 Set-Alias -Name apps -Value appwiz.cpl
 Set-Alias -Name note -Value notepad.exe
