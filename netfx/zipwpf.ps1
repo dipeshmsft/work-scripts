@@ -35,5 +35,5 @@ $archivePath = Join-Path $binaryRoot $archiveName
 Write-Output("Compressing to zip file $archiveName")
 Compress-Archive $destinationDir $archivePath
 
-Write-Output("Removing $destinationDir ...")
-Remove-Item $destinationDir -Recurse
+# Write-Output("Removing $destinationDir ...")
+# Remove-Item $destinationDir -Recurse
