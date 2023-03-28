@@ -1,3 +1,8 @@
+# /*
+#  * This is an archived script that combined sanitize and codeformatter. However, it doesn't seem to work on my system.
+#  * Therefore developed other scripts to do the same thing.
+#  */
+
 [CmdletBinding(PositionalBinding=$false)]
 Param(
     [string][Alias('b')]$branchName,
